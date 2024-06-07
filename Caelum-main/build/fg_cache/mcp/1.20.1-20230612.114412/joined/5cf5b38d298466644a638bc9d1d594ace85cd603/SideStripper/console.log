@@ -1,0 +1,9 @@
+JVM:         C:\Program Files\Java\jdk-17.0.1\bin\java.exe
+JVM Args:    
+Run Args:    "--strip", "--input", "D:\ToTheEdge\Caelum-main\build\fg_cache\mcp\1.20.1-20230612.114412\joined\5cf5b38d298466644a638bc9d1d594ace85cd603\AccessTransformer\output.jar", "--output", "D:\ToTheEdge\Caelum-main\build\fg_cache\mcp\1.20.1-20230612.114412\joined\5cf5b38d298466644a638bc9d1d594ace85cd603\SideStripper\output.jar", "--data", "D:\ToTheEdge\Caelum-main\build\fg_cache\mcp\1.20.1-20230612.114412\joined\5cf5b38d298466644a638bc9d1d594ace85cd603\SideStripper\string_data.sas"
+Classpath:   C:\Users\RedstoneGate\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\mergetool\1.1.7\mergetool-1.1.7-fatjar.jar
+Working Dir: D:\ToTheEdge\Caelum-main\build\fg_cache\mcp\1.20.1-20230612.114412\joined\5cf5b38d298466644a638bc9d1d594ace85cd603\SideStripper
+Main Class:  net.minecraftforge.mergetool.ConsoleMerger
+Input:  D:\ToTheEdge\Caelum-main\build\fg_cache\mcp\1.20.1-20230612.114412\joined\5cf5b38d298466644a638bc9d1d594ace85cd603\AccessTransformer\output.jar
+Output: D:\ToTheEdge\Caelum-main\build\fg_cache\mcp\1.20.1-20230612.114412\joined\5cf5b38d298466644a638bc9d1d594ace85cd603\SideStripper\output.jar
+Data:   D:\ToTheEdge\Caelum-main\build\fg_cache\mcp\1.20.1-20230612.114412\joined\5cf5b38d298466644a638bc9d1d594ace85cd603\SideStripper\string_data.sas

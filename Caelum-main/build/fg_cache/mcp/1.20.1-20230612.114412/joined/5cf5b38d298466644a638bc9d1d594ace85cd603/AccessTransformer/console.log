@@ -1,0 +1,6 @@
+JVM:         C:\Program Files\Java\jdk-17.0.1\bin\java.exe
+JVM Args:    
+Run Args:    "--inJar", "D:\ToTheEdge\Caelum-main\build\fg_cache\mcp\1.20.1-20230612.114412\joined\5cf5b38d298466644a638bc9d1d594ace85cd603\rename\output.jar", "--outJar", "D:\ToTheEdge\Caelum-main\build\fg_cache\mcp\1.20.1-20230612.114412\joined\5cf5b38d298466644a638bc9d1d594ace85cd603\AccessTransformer\output.jar", "--atFile", "D:\ToTheEdge\Caelum-main\src\main\resources\META-INF\accesstransformer.cfg", "--atFile", "C:\Users\REDSTO~1\AppData\Local\Temp\FG_ats_7941476450580456097.cfg"
+Classpath:   C:\Users\RedstoneGate\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\accesstransformers\8.2.0\accesstransformers-8.2.0-fatjar.jar
+Working Dir: D:\ToTheEdge\Caelum-main\build\fg_cache\mcp\1.20.1-20230612.114412\joined\5cf5b38d298466644a638bc9d1d594ace85cd603\AccessTransformer
+Main Class:  net.minecraftforge.accesstransformer.TransformerProcessor

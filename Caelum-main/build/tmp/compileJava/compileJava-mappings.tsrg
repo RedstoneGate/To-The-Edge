@@ -1,0 +1,4 @@
+nuparu/caelum/mixin/MixinClientLevel minecraft f_104565_
+nuparu/caelum/mixin/MixinLevelRenderer level f_109465_
+nuparu/caelum/mixin/MixinLevelRenderer starBuffer f_109471_
+nuparu/caelum/mixin/MixinLevelRenderer lastCameraZ f_109421_

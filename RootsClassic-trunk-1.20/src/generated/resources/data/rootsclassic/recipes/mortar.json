@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "X": {
+      "tag": "forge:stone"
+    }
+  },
+  "pattern": [
+    "X X",
+    "X X",
+    " X "
+  ],
+  "result": {
+    "item": "rootsclassic:mortar"
+  },
+  "show_notification": true
+}

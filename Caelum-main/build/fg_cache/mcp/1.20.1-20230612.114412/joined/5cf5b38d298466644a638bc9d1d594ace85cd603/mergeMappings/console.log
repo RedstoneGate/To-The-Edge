@@ -1,0 +1,16 @@
+JVM:         C:\Program Files\Java\jdk-17.0.1\bin\java.exe
+JVM Args:    
+Run Args:    "--task", "MERGE_MAPPING", "--left", "config/joined.tsrg", "--right", "D:\ToTheEdge\Caelum-main\build\fg_cache\mcp\1.20.1-20230612.114412\joined\5cf5b38d298466644a638bc9d1d594ace85cd603\downloadClientMappings\client_mappings.txt", "--right-names", "right,left", "--classes", "--output", "D:\ToTheEdge\Caelum-main\build\fg_cache\mcp\1.20.1-20230612.114412\joined\5cf5b38d298466644a638bc9d1d594ace85cd603\mergeMappings\output.jar"
+Classpath:   C:\Users\RedstoneGate\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\installertools\1.2.0\installertools-1.2.0-fatjar.jar
+Working Dir: D:\ToTheEdge\Caelum-main\build\fg_cache\mcp\1.20.1-20230612.114412\joined\5cf5b38d298466644a638bc9d1d594ace85cd603\mergeMappings
+Main Class:  net.minecraftforge.installertools.ConsoleTool
+Task: MERGE_MAPPING
+Left:    config\joined.tsrg
+         null
+Right:   D:\ToTheEdge\Caelum-main\build\fg_cache\mcp\1.20.1-20230612.114412\joined\5cf5b38d298466644a638bc9d1d594ace85cd603\downloadClientMappings\client_mappings.txt
+         right,left
+Classes: true
+Fields:  false
+Methods: false
+Params:  false
+Output:  D:\ToTheEdge\Caelum-main\build\fg_cache\mcp\1.20.1-20230612.114412\joined\5cf5b38d298466644a638bc9d1d594ace85cd603\mergeMappings\output.jar

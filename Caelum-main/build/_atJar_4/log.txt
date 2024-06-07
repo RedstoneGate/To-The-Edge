@@ -1,0 +1,7 @@
+Java Launcher: C:\Program Files\Java\jdk-17.0.1\bin\java.exe
+Arguments: '--inJar, D:\ToTheEdge\Caelum-main\build\fg_cache\net\minecraftforge\forge\1.20.1-47.1.43\forge-1.20.1-47.1.43-injected.jar, --outJar, D:\ToTheEdge\Caelum-main\build\fg_cache\net\minecraftforge\forge\1.20.1-47.1.43_mapped_official_1.20.1\forge-1.20.1-47.1.43_mapped_official_1.20.1.jar, --logFile, accesstransform.log, --atFile, D:\ToTheEdge\Caelum-main\src\main\resources\META-INF\accesstransformer.cfg, --atFile, D:\ToTheEdge\Caelum-main\build\_atJar_4\parent_at.cfg'
+Classpath:
+ - C:\Users\RedstoneGate\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\accesstransformers\8.2.0\accesstransformers-8.2.0-fatjar.jar
+Working directory: D:\ToTheEdge\Caelum-main\build\_atJar_4
+Main class: net.minecraftforge.accesstransformer.TransformerProcessor
+====================================

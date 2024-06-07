@@ -1,0 +1,50 @@
+{
+  "mappings": {
+    "nuparu/caelum/mixin/MixinLevelRenderer": {
+      "Lcom/mojang/blaze3d/vertex/PoseStack;mulPose(Lorg/joml/Quaternionf;)V": "Lcom/mojang/blaze3d/vertex/PoseStack;m_252781_(Lorg/joml/Quaternionf;)V",
+      "Lnet/minecraft/client/multiplayer/ClientLevel;getRainLevel(F)F": "Lnet/minecraft/client/multiplayer/ClientLevel;m_46722_(F)F",
+      "Lnet/minecraft/client/multiplayer/ClientLevel;getStarBrightness(F)F": "Lnet/minecraft/client/multiplayer/ClientLevel;m_104811_(F)F",
+      "renderSky(Lcom/mojang/blaze3d/vertex/PoseStack;Lorg/joml/Matrix4f;FLnet/minecraft/client/Camera;ZLjava/lang/Runnable;)V": "Lnet/minecraft/client/renderer/LevelRenderer;m_202423_(Lcom/mojang/blaze3d/vertex/PoseStack;Lorg/joml/Matrix4f;FLnet/minecraft/client/Camera;ZLjava/lang/Runnable;)V",
+      "Lcom/mojang/blaze3d/vertex/VertexBuffer;drawWithShader(Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/ShaderInstance;)V": "Lcom/mojang/blaze3d/vertex/VertexBuffer;m_253207_(Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/ShaderInstance;)V",
+      "Lnet/minecraft/client/multiplayer/ClientLevel;getMoonPhase()I": "Lnet/minecraft/client/multiplayer/ClientLevel;m_46941_()I",
+      "Lnet/minecraft/client/renderer/DimensionSpecialEffects;getSunriseColor(FF)[F": "Lnet/minecraft/client/renderer/DimensionSpecialEffects;m_7518_(FF)[F"
+    },
+    "nuparu/caelum/mixin/MixinDimensionType": {
+      "moonPhase(J)I": "Lnet/minecraft/world/level/dimension/DimensionType;m_63936_(J)I"
+    },
+    "nuparu/caelum/mixin/MixinClientLevel": {
+      "Lnet/minecraft/client/multiplayer/ClientLevel;getStarBrightness(F)F": "Lnet/minecraft/client/multiplayer/ClientLevel;m_104811_(F)F",
+      "Lnet/minecraft/client/multiplayer/ClientLevel;getTimeOfDay(F)F": "Lnet/minecraft/client/multiplayer/ClientLevel;m_46942_(F)F",
+      "getSkyColor(Lnet/minecraft/world/phys/Vec3;F)Lnet/minecraft/world/phys/Vec3;": "Lnet/minecraft/client/multiplayer/ClientLevel;m_171660_(Lnet/minecraft/world/phys/Vec3;F)Lnet/minecraft/world/phys/Vec3;"
+    },
+    "nuparu/caelum/mixin/MixinFogRenderer": {
+      "Lnet/minecraft/client/multiplayer/ClientLevel;getTimeOfDay(F)F": "Lnet/minecraft/client/multiplayer/ClientLevel;m_46942_(F)F",
+      "setupColor(Lnet/minecraft/client/Camera;FLnet/minecraft/client/multiplayer/ClientLevel;IF)V": "Lnet/minecraft/client/renderer/FogRenderer;m_109018_(Lnet/minecraft/client/Camera;FLnet/minecraft/client/multiplayer/ClientLevel;IF)V"
+    }
+  },
+  "data": {
+    "searge": {
+      "nuparu/caelum/mixin/MixinLevelRenderer": {
+        "Lcom/mojang/blaze3d/vertex/PoseStack;mulPose(Lorg/joml/Quaternionf;)V": "Lcom/mojang/blaze3d/vertex/PoseStack;m_252781_(Lorg/joml/Quaternionf;)V",
+        "Lnet/minecraft/client/multiplayer/ClientLevel;getRainLevel(F)F": "Lnet/minecraft/client/multiplayer/ClientLevel;m_46722_(F)F",
+        "Lnet/minecraft/client/multiplayer/ClientLevel;getStarBrightness(F)F": "Lnet/minecraft/client/multiplayer/ClientLevel;m_104811_(F)F",
+        "renderSky(Lcom/mojang/blaze3d/vertex/PoseStack;Lorg/joml/Matrix4f;FLnet/minecraft/client/Camera;ZLjava/lang/Runnable;)V": "Lnet/minecraft/client/renderer/LevelRenderer;m_202423_(Lcom/mojang/blaze3d/vertex/PoseStack;Lorg/joml/Matrix4f;FLnet/minecraft/client/Camera;ZLjava/lang/Runnable;)V",
+        "Lcom/mojang/blaze3d/vertex/VertexBuffer;drawWithShader(Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/ShaderInstance;)V": "Lcom/mojang/blaze3d/vertex/VertexBuffer;m_253207_(Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/ShaderInstance;)V",
+        "Lnet/minecraft/client/multiplayer/ClientLevel;getMoonPhase()I": "Lnet/minecraft/client/multiplayer/ClientLevel;m_46941_()I",
+        "Lnet/minecraft/client/renderer/DimensionSpecialEffects;getSunriseColor(FF)[F": "Lnet/minecraft/client/renderer/DimensionSpecialEffects;m_7518_(FF)[F"
+      },
+      "nuparu/caelum/mixin/MixinDimensionType": {
+        "moonPhase(J)I": "Lnet/minecraft/world/level/dimension/DimensionType;m_63936_(J)I"
+      },
+      "nuparu/caelum/mixin/MixinClientLevel": {
+        "Lnet/minecraft/client/multiplayer/ClientLevel;getStarBrightness(F)F": "Lnet/minecraft/client/multiplayer/ClientLevel;m_104811_(F)F",
+        "Lnet/minecraft/client/multiplayer/ClientLevel;getTimeOfDay(F)F": "Lnet/minecraft/client/multiplayer/ClientLevel;m_46942_(F)F",
+        "getSkyColor(Lnet/minecraft/world/phys/Vec3;F)Lnet/minecraft/world/phys/Vec3;": "Lnet/minecraft/client/multiplayer/ClientLevel;m_171660_(Lnet/minecraft/world/phys/Vec3;F)Lnet/minecraft/world/phys/Vec3;"
+      },
+      "nuparu/caelum/mixin/MixinFogRenderer": {
+        "Lnet/minecraft/client/multiplayer/ClientLevel;getTimeOfDay(F)F": "Lnet/minecraft/client/multiplayer/ClientLevel;m_46942_(F)F",
+        "setupColor(Lnet/minecraft/client/Camera;FLnet/minecraft/client/multiplayer/ClientLevel;IF)V": "Lnet/minecraft/client/renderer/FogRenderer;m_109018_(Lnet/minecraft/client/Camera;FLnet/minecraft/client/multiplayer/ClientLevel;IF)V"
+      }
+    }
+  }
+}
