@@ -400,6 +400,8 @@ public class BloodMagicItems
 	public static final RegistryObject<Item> COPPER_FRAGMENT = BASICITEMS.register("copperfragment", () -> new ItemBase());
 	public static final RegistryObject<Item> NETHERITE_SCRAP_FRAGMENT = BASICITEMS.register("fragment_netherite_scrap", () -> new ItemBase());
 	public static final RegistryObject<Item> DEMONITE_FRAGMENT = BASICITEMS.register("demonitefragment", () -> new ItemBase());
+	public static final RegistryObject<Item> HORIZONITE_FRAGMENT = BASICITEMS.register("horizonitefragment", () -> new ItemBase());
+	public static final RegistryObject<Item> FALSITE_FRAGMENT = BASICITEMS.register("falsitefragment", () -> new ItemBase());
 
 	// Gravels
 	public static final RegistryObject<Item> IRON_GRAVEL = BASICITEMS.register("irongravel", () -> new ItemBase());
@@ -407,6 +409,8 @@ public class BloodMagicItems
 	public static final RegistryObject<Item> COPPER_GRAVEL = BASICITEMS.register("coppergravel", () -> new ItemBase());
 	public static final RegistryObject<Item> NETHERITE_SCRAP_GRAVEL = BASICITEMS.register("gravel_netherite_scrap", () -> new ItemBase());
 	public static final RegistryObject<Item> DEMONITE_GRAVEL = BASICITEMS.register("demonitegravel", () -> new ItemBase());
+	public static final RegistryObject<Item> HORIZONITE_GRAVEL = BASICITEMS.register("horizonitegravel", () -> new ItemBase());
+	public static final RegistryObject<Item> FALSITE_GRAVEL = BASICITEMS.register("falsitegravel", () -> new ItemBase());
 
 	// Sands
 	public static final RegistryObject<Item> IRON_SAND = BASICITEMS.register("ironsand", () -> new ItemBase());
@@ -417,6 +421,7 @@ public class BloodMagicItems
 	public static final RegistryObject<Item> CORRUPTED_DUST = BASICITEMS.register("corrupted_dust", () -> new ItemBase());
 	public static final RegistryObject<Item> CORRUPTED_DUST_TINY = BASICITEMS.register("corrupted_tinydust", () -> new ItemBase());
 	public static final RegistryObject<Item> HELLFORGED_SAND = BASICITEMS.register("sand_hellforged", () -> new ItemBase());
+	public static final RegistryObject<Item> HORIZONITE_SAND = BASICITEMS.register("horizonitesand", () -> new ItemBase());
 
 	// Dungeons
 	public static final RegistryObject<Item> DEMONITE_RAW = BASICITEMS.register("rawdemonite", () -> new ItemBase());

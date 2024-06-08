@@ -887,6 +887,7 @@ public class GeneratorLanguage extends LanguageProvider
 		addItem(BloodMagicItems.IRON_SAND, "Iron Sand");
 		addItem(BloodMagicItems.GOLD_SAND, "Gold Sand");
 		addItem(BloodMagicItems.COPPER_SAND, "Copper Sand");
+		addItem(BloodMagicItems.HORIZONITE_SAND, "Horizonite Sand");
 		addItem(BloodMagicItems.NETHERITE_SCRAP_SAND, "Netherite Scrap Sand");
 		addItem(BloodMagicItems.SULFUR, "Sulfur");
 		addItem(BloodMagicItems.SALTPETER, "Saltpeter");
@@ -897,6 +898,8 @@ public class GeneratorLanguage extends LanguageProvider
 		addItem(BloodMagicItems.COPPER_FRAGMENT, "Copper Fragment");
 		addItem(BloodMagicItems.NETHERITE_SCRAP_FRAGMENT, "Ancient Debris Fragment");
 		addItem(BloodMagicItems.DEMONITE_FRAGMENT, "Demonite Fragment");
+		addItem(BloodMagicItems.HORIZONITE_FRAGMENT, "Horizonite Fragment");
+		addItem(BloodMagicItems.FALSITE_FRAGMENT, "Falsite Fragment");
 
 		// Gravels
 		addItem(BloodMagicItems.IRON_GRAVEL, "Iron Gravel");
@@ -904,6 +907,8 @@ public class GeneratorLanguage extends LanguageProvider
 		addItem(BloodMagicItems.COPPER_GRAVEL, "Copper Gravel");
 		addItem(BloodMagicItems.DEMONITE_GRAVEL, "Demonite Gravel");
 		addItem(BloodMagicItems.NETHERITE_SCRAP_GRAVEL, "Ancient Debris Gravel");
+		addItem(BloodMagicItems.HORIZONITE_GRAVEL, "Horizonite Gravel");
+		addItem(BloodMagicItems.FALSITE_GRAVEL, "Falsite Gravel");
 
 //		addItem(BloodMagicItems , "");
 
