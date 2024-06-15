@@ -2,6 +2,7 @@ package com.tss.malefic;
 
 import com.mojang.logging.LogUtils;
 import com.tss.malefic.content.mobs.spawn.EmptyPredicate;
+import com.tss.malefic.content.mobs.spawn.SlimeSpawnPredicate;
 import com.tss.malefic.content.mobs.spawn.ZombieSpawnPredicate;
 import com.tss.malefic.handler.EventHandler;
 import net.minecraft.world.entity.EntityType;
@@ -135,6 +136,9 @@ public class Malefic
             e.register(EntityType.DROWNED, new EmptyPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
             e.register(EntityType.STRAY, new EmptyPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
             e.register(EntityType.HUSK, new EmptyPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
+
+            // Slime , change your y offset in SlimeSpawnPredicate
+            e.register(EntityType.SLIME, new SlimeSpawnPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
         }
     }
 }
