@@ -1,20 +1,16 @@
 package com.tss.malefic;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
+import com.tss.malefic.content.mobs.spawn.EmptyPredicate;
+import com.tss.malefic.content.mobs.spawn.ZombieSpawnPredicate;
+import com.tss.malefic.handler.EventHandler;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.entity.SpawnPlacementRegisterEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -26,7 +22,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -123,6 +118,23 @@ public class Malefic
             // Some client setup code
             //LOGGER.info("HELLO FROM CLIENT SETUP");
             //LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+        }
+    }
+
+    // replace spawnrule
+    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static class spawnPlacementRegister{
+        @SubscribeEvent
+        public static void spawnPlacementRegisterEvent(SpawnPlacementRegisterEvent e){
+            e.register(EntityType.ZOMBIE, new ZombieSpawnPredicate(), SpawnPlacementRegisterEvent.Operation.REPLACE);
+
+            // TODO
+            e.register(EntityType.SPIDER, new EmptyPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.SKELETON, new EmptyPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.CREEPER, new EmptyPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.DROWNED, new EmptyPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.STRAY, new EmptyPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.HUSK, new EmptyPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
         }
     }
 }
