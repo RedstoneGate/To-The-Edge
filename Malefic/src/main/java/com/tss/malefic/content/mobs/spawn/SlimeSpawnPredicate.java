@@ -25,6 +25,7 @@ public class SlimeSpawnPredicate implements SpawnPlacements.SpawnPredicate{
                 if (randomSource.nextInt(10) == 0 && flag && blockPos.getY() < 40) {
                     return checkMobSpawnRules(entityType, level, mobSpawnType, blockPos, randomSource);
                 }
+                return false;
             }
             return checkMobSpawnRules(entityType,level,mobSpawnType,blockPos,randomSource);
         }
