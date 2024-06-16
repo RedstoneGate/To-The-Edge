@@ -27,6 +27,7 @@ public class SlimeSpawnPredicate implements SpawnPlacements.SpawnPredicate{
                 } else {
                     return false;
                 }
+                return false;
             }
             return checkMobSpawnRules(entityType,level,mobSpawnType,blockPos,randomSource);
         }
