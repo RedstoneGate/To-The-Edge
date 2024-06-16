@@ -74,34 +74,22 @@
     "misc": [],
     "monster": [
       {
-        "type": "minecraft:ghast",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 50
-      },
-      {
-        "type": "minecraft:zombified_piglin",
+        "type": "minecraft:slime",
         "maxCount": 4,
         "minCount": 4,
         "weight": 100
       },
       {
-        "type": "minecraft:magma_cube",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 2
-      },
-      {
         "type": "minecraft:enderman",
         "maxCount": 4,
-        "minCount": 4,
-        "weight": 1
+        "minCount": 1,
+        "weight": 10
       },
       {
-        "type": "minecraft:piglin",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 15
+        "type": "minecraft:witch",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 5
       }
     ],
     "underground_water_creature": [],
