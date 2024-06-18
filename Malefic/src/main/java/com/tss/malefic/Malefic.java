@@ -4,8 +4,8 @@ import com.mojang.logging.LogUtils;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.tss.malefic.content.mobs.spawn.EmptyPredicate;
+import com.tss.malefic.content.mobs.spawn.HostileSpawnPredicate;
 import com.tss.malefic.content.mobs.spawn.SlimeSpawnPredicate;
-import com.tss.malefic.content.mobs.spawn.ZombieSpawnPredicate;
 import com.tss.malefic.handler.EventHandler;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -46,7 +46,7 @@ public class Malefic
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
     // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
     //public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
-    public static final DeferredRegister<Codec<? extends BiomeModifier>> BIOME_MODIFIER_SERIALIZERS =  DeferredRegister.create(ForgeRegistries.Keys.BIOME_MODIFIER_SERIALIZERS, MODID);
+    /*public static final DeferredRegister<Codec<? extends BiomeModifier>> BIOME_MODIFIER_SERIALIZERS =  DeferredRegister.create(ForgeRegistries.Keys.BIOME_MODIFIER_SERIALIZERS, MODID);
 
     public static final RegistryObject<Codec<EntitySpawnBiomeModifier>> ENTITY_SPAWN_BIOME_MODIFIER_CODEC = BIOME_MODIFIER_SERIALIZERS.register("entity_spawn_modifier", () ->
             RecordCodecBuilder.create(builder -> builder.group(
@@ -54,8 +54,8 @@ public class Malefic
                     Biome.LIST_CODEC.fieldOf("biomes").forGetter(EntitySpawnBiomeModifier::biomes),
                     PlacedFeature.CODEC.fieldOf("feature").forGetter(EntitySpawnBiomeModifier::feature)
                     // declare constructor
-            ).apply(builder,EntitySpawnBiomeModifier::new)));
-    
+            ).apply(builder,EntitySpawnBiomeModifier::new)));*/
+
     public Malefic()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -72,7 +72,7 @@ public class Malefic
         ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         //CREATIVE_MODE_TABS.register(modEventBus);
-        BIOME_MODIFIER_SERIALIZERS.register(modEventBus);
+        //BIOME_MODIFIER_SERIALIZERS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -89,12 +89,12 @@ public class Malefic
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
 
-        if (Config.logDirtBlock)
-            LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
+        /*if (Config.logDirtBlock)
+            LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));*/
 
-        LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
+        //LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
-        Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
+        //Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 
     // Add the example block item to the building blocks tab
@@ -126,15 +126,26 @@ public class Malefic
     public static class spawnPlacementRegister{
         @SubscribeEvent
         public static void spawnPlacementRegisterEvent(SpawnPlacementRegisterEvent e){
-            e.register(EntityType.ZOMBIE, new ZombieSpawnPredicate(), SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.ZOMBIE, new HostileSpawnPredicate(), SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.ZOMBIE_VILLAGER, new HostileSpawnPredicate(), SpawnPlacementRegisterEvent.Operation.REPLACE);
 
-            e.register(EntityType.SPIDER, new EmptyPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
-            e.register(EntityType.SKELETON, new EmptyPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
-            e.register(EntityType.CREEPER, new EmptyPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
-            e.register(EntityType.DROWNED, new EmptyPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
-            e.register(EntityType.STRAY, new EmptyPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
-            e.register(EntityType.HUSK, new EmptyPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
-            e.register(EntityType.BLAZE, new ZombieSpawnPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.SPIDER, new HostileSpawnPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.SKELETON, new HostileSpawnPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.CREEPER, new HostileSpawnPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
+
+            e.register(EntityType.DROWNED, new HostileSpawnPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.STRAY, new HostileSpawnPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.HUSK, new HostileSpawnPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.WITHER_SKELETON, new HostileSpawnPredicate(), SpawnPlacementRegisterEvent.Operation.REPLACE);
+
+            e.register(EntityType.RAVAGER, new HostileSpawnPredicate(), SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.ILLUSIONER, new HostileSpawnPredicate(), SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.VINDICATOR, new HostileSpawnPredicate(), SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.VEX, new HostileSpawnPredicate(), SpawnPlacementRegisterEvent.Operation.REPLACE);
+
+            e.register(EntityType.GUARDIAN, new HostileSpawnPredicate(), SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.PHANTOM, new HostileSpawnPredicate(), SpawnPlacementRegisterEvent.Operation.REPLACE);
+            e.register(EntityType.BLAZE, new HostileSpawnPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
 
             e.register(EntityType.SLIME, new SlimeSpawnPredicate(),SpawnPlacementRegisterEvent.Operation.REPLACE);
         }

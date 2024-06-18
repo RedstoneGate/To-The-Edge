@@ -24,8 +24,6 @@ public class SlimeSpawnPredicate implements SpawnPlacements.SpawnPredicate{
                 boolean flag = WorldgenRandom.seedSlimeChunk(chunkpos.x, chunkpos.z, ((WorldGenLevel) level).getSeed(), 987234911L).nextInt(10) == 0;
                 if (flag && blockPos.getY() >= 90) {
                     return checkMobSpawnRules(entityType, level, mobSpawnType, blockPos, randomSource);
-                } else {
-                    return false;
                 }
                 return false;
             }

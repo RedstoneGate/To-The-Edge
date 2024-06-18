@@ -38,10 +38,23 @@ public class Config
 
     static final ForgeConfigSpec SPEC = BUILDER.build();
 
-    public static boolean logDirtBlock;
-    public static int magicNumber;
-    public static String magicNumberIntroduction;
-    public static Set<Item> items;
+    public static float compositeMobChance = 0.05f;
+    public static float veteranChance = 0.03f;
+    public static float eliteChance = 0.015f;
+    public static float legendaryChance = 0.005f;
+    public static float veteranHealthMultiplier = 2f;
+    public static float eliteHealthMultiplier = 4f;
+    public static float legendaryHealthMultiplier = 16f;
+    public static float veteranSpeedMultiplier = 1.5f;
+    public static float eliteSpeedMultiplier = 2f;
+    public static float legendarySpeedMultiplier = 3f;
+    public static float veteranEnchantMultiplier = 5f;
+    public static float eliteEnchantMultiplier = 15f;
+    public static float legendaryEnchantMultiplier = 30f;
+    public static float ghastPower = 6f;
+    public static float bruteHeal = 20f;
+    public static float bruteDamageIncrement = 4f;
+    public static float bruteDamageIncrementCap = 59.5f;
 
     private static boolean validateItemName(final Object obj)
     {
@@ -51,13 +64,13 @@ public class Config
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event)
     {
-        logDirtBlock = LOG_DIRT_BLOCK.get();
-        magicNumber = MAGIC_NUMBER.get();
-        magicNumberIntroduction = MAGIC_NUMBER_INTRODUCTION.get();
+        //logDirtBlock = LOG_DIRT_BLOCK.get();
+        //magicNumber = MAGIC_NUMBER.get();
+        //magicNumberIntroduction = MAGIC_NUMBER_INTRODUCTION.get();
 
         // convert the list of strings into a set of items
-        items = ITEM_STRINGS.get().stream()
+        /*items = ITEM_STRINGS.get().stream()
                 .map(itemName -> ForgeRegistries.ITEMS.getValue(new ResourceLocation(itemName)))
-                .collect(Collectors.toSet());
+                .collect(Collectors.toSet());*/
     }
 }
