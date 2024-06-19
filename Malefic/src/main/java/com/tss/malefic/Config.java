@@ -42,9 +42,9 @@ public class Config
     public static float veteranChance = 0.03f;
     public static float eliteChance = 0.015f;
     public static float legendaryChance = 0.005f;
-    public static float veteranHealthMultiplier = 2f;
-    public static float eliteHealthMultiplier = 4f;
-    public static float legendaryHealthMultiplier = 16f;
+    public static float veteranHealthMultiplier = 4f;
+    public static float eliteHealthMultiplier = 8f;
+    public static float legendaryHealthMultiplier = 32f;
     public static float veteranSpeedMultiplier = 1.5f;
     public static float eliteSpeedMultiplier = 2f;
     public static float legendarySpeedMultiplier = 3f;
