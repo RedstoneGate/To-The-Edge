@@ -48,6 +48,9 @@ public class Config
     public static float veteranSpeedMultiplier = 1.5f;
     public static float eliteSpeedMultiplier = 2f;
     public static float legendarySpeedMultiplier = 3f;
+    public static float veteranAttackAddition = 6f;
+    public static float eliteAttackAddition = 12f;
+    public static float legendaryAttackAddition = 25f;
     public static float veteranEnchantMultiplier = 5f;
     public static float eliteEnchantMultiplier = 15f;
     public static float legendaryEnchantMultiplier = 30f;
