@@ -26,11 +26,12 @@ public class EventHandler {
         e.setCanceled(true);
     }*/
     private float timeBuffer=0;
+    private float ticks=0;
 
     @SubscribeEvent
-    public void onTick(TickEvent.LevelTickEvent e){
-        if(!e.level.isClientSide()){
-            ServerLevel serverLevel = (ServerLevel)e.level;
+    public void onTick(TickEvent.ServerTickEvent e){
+        if(e.phase.equals(TickEvent.Phase.START)){
+            ServerLevel serverLevel = (ServerLevel)e.getServer().getLevel(Level.OVERWORLD);
             float dayTime = Math.floorMod(serverLevel.getDayTime(),24000);
             float normalizedTime = 0;
             float timeMultiplier = 1;
